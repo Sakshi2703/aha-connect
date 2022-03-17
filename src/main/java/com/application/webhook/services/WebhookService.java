@@ -26,4 +26,9 @@ public class WebhookService {
 	public Object fetchContents() {
 		return contents;
 	}
+	
+	public Boolean clearContent() {
+		contents.clear();
+		return true;
+	}
 }
