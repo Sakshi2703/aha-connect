@@ -27,5 +27,10 @@ public class WebhookController {
 		Object data = webhookService.saveContents(requestPayload);
 		return new ResponseEntity<Object>(data,HttpStatus.CREATED);
 	}
-
+	
+	@GetMapping("/clear")
+	public Object clearDataFromContents() {
+		Object data = webhookService.clearContent();
+		return new ResponseEntity<Object>(data,HttpStatus.OK);
+	}
 }
